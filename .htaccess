@@ -1,6 +1,7 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
+    RewriteBase /fibonacci-phiraka/
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule ^(.*)$ /fibonacci-phiraka/index.php/$1 [L]
+    RewriteRule ^(.*)$ index.php/$1 [L]
 </IfModule>
