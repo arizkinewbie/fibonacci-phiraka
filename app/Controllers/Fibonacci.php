@@ -25,10 +25,10 @@ class Fibonacci extends BaseController
 
     private function getFibonacciSequence($count)
     {
-        $sequence = [0, 1];
+        $sequence = ['0', '1'];
 
         for ($i = 2; $i < $count; $i++) {
-            $sequence[$i] = $sequence[$i - 1] + $sequence[$i - 2];
+            $sequence[$i] = bcadd($sequence[$i - 1], $sequence[$i - 2]);
         }
 
         return array_slice($sequence, 0, $count);
