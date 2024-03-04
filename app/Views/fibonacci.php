@@ -13,13 +13,17 @@
 <body>
     <h1>Fibonacci - Phiraka Test</h1>
     <form id="fibonacci-form">
-        <p>Rows <input type="number" name="rows" required></p>
-        <p>Columns <input type="number" name="columns" required></p>
-        <button type="submit">Submit</button>
+        <p>
+            <label for="rows" style="margin-right: 50px;">Rows</label>
+            <input type="number" name="rows" id="rows" required>
+        </p>
+        <p>
+            <label for="columns" style="margin-right: 26px;">Columns</label>
+            <input type="number" name="columns" id="columns" required>
+        </p>
+        <button type="submit" style="margin-right: 30px;">Submit</button>
     </form>
-    <br /><br />
-    <div id="fibonacci-table">
-    </div>
+    <div id="fibonacci-table" style="margin-top: 20px;">
 </body>
 
 </html>
