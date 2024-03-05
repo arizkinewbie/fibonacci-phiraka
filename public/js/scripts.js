@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
           document.getElementById("fibonacci-table").innerHTML = this.response;
         } else {
           console.error("Server responded with an error.");
+          alert("Permintaan kolom atau baris melebihi batas. Silahkan coba lagi.");
         }
       };
       xhr.onerror = function () {
