@@ -14,8 +14,10 @@ document.addEventListener("DOMContentLoaded", function () {
       xhr.onload = function () {
         // On success, update the page content
         if (this.status >= 200 && this.status < 400) {
-          // The request and server response was successful
-          // Directly use this.response as it's expected to be HTML
+          if (columns <= 0 || rows <= 0) {
+            console.error("Server responded with an error.");
+            alert("kolom dan baris harus lebih dari angka 0.");
+          }
           document.getElementById("fibonacci-table").innerHTML = this.response;
         } else {
           console.error("Server responded with an error.");
