@@ -121,7 +121,7 @@ nb-configuration.xml
 
 # Visual Studio Code
 .vscode/
-
+NOTE.md
 /results/
 /phpunit*.xml
 /.phpunit.*.cache
