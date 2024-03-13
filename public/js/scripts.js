@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (columns <= 0 || rows <= 0) {
         console.error("Server responded with an error.");
         alert("kolom dan baris harus lebih dari angka 0.");
+        window.location.reload();
       }
       // Perform the AJAX request
       var xhr = new XMLHttpRequest();
@@ -17,11 +18,12 @@ document.addEventListener("DOMContentLoaded", function () {
       xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
       xhr.onload = function () {
         // On success, update the page content
-        if (this.status >= 200 && this.status < 400 ) {
+        if (this.status >= 200 && this.status < 400) {
           document.getElementById("fibonacci-table").innerHTML = this.response;
         } else {
           console.error("Server responded with an error.");
           alert("Permintaan kolom atau baris melebihi batas. Silahkan coba lagi.");
+          window.location.reload();
         }
       };
       xhr.onerror = function () {
